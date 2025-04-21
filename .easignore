@@ -1,0 +1,8 @@
+# Copy everything from .gitignore
+/node_modules
+/.expo
+# Additional build artifacts to ignore
+/android
+/ios
+/coverage
+/docs

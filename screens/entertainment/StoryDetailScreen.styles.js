@@ -1,0 +1,705 @@
+import { Platform, Dimensions } from 'react-native';
+import { colors } from '../../theme/colors';
+
+const { width } = Dimensions.get('window');
+
+export const styles = {
+  contentWrapper: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  scrollView: {
+    flex: 1,
+  },
+  scrollContent: {
+    padding: 16,
+    paddingBottom: 80,
+  },
+  chapterHeader: {
+    marginBottom: 24,
+  },
+  chapterTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: colors.text,
+    marginBottom: 8,
+  },
+  chapterSubtitle: {
+    fontSize: 16,
+    color: colors.text,
+    marginBottom: 16,
+  },
+  paragraph: {
+    fontSize: 16,
+    lineHeight: 24,
+    color: colors.text,
+    marginBottom: 16,
+    textAlign: 'justify',
+  },
+  largeText: {
+    fontSize: 18,
+    lineHeight: 28,
+  },
+  relaxedLineHeight: {
+    lineHeight: 32,
+  },
+  darkText: {
+    color: '#fff',
+  },
+  errorContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  errorText: {
+    color: colors.text,
+    fontSize: 16,
+  },
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  header: {
+    paddingTop: 40,
+    paddingBottom: 16,
+  },
+  headerContent: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+  },
+  headerActions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 16,
+  },
+  headerButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 8,
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+  },
+  headerButtonText: {
+    color: '#fff',
+    marginLeft: 4,
+    fontSize: 12,
+    fontWeight: '500',
+  },
+  content: {
+    flex: 1,
+    padding: 16,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: '700',
+    color: colors.text,
+    marginBottom: 8,
+    textAlign: 'center',
+  },
+  description: {
+    fontSize: 15,
+    lineHeight: 24,
+    color: colors.text,
+    textAlign: 'justify',
+  },
+  contentContainer: {
+    flex: 1,
+  },
+  volumeList: {
+    flexGrow: 0,
+    marginBottom: 16,
+  },
+  volumeTab: {
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    marginRight: 8,
+    backgroundColor: colors.lightGrey,
+    borderRadius: 20,
+  },
+  activeVolumeTab: {
+    backgroundColor: colors.primary,
+  },
+  volumeTitle: {
+    color: colors.text,
+    fontSize: 14,
+  },
+  activeText: {
+    color: '#fff',
+    fontWeight: '600',
+  },
+  chapterList: {
+    flexGrow: 0,
+    marginBottom: 16,
+  },
+  chapterTab: {
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    marginRight: 8,
+    backgroundColor: colors.lightGrey,
+    borderRadius: 20,
+  },
+  activeChapterTab: {
+    backgroundColor: colors.primary,
+  },
+  chapterNumber: {
+    color: colors.text,
+    fontSize: 14,
+  },
+  activeChapterText: {
+    color: '#fff',
+    fontWeight: '600',
+  },
+  chapterContent: {
+    flex: 1,
+  },
+  contentText: {
+    fontSize: 16,
+    lineHeight: 24,
+    color: colors.text,
+    marginBottom: 16,
+    paddingHorizontal: 16,
+    ...(Platform.OS === 'ios' ? {
+      fontFamily: 'System',
+    } : {
+      fontFamily: 'Roboto',
+    }),
+  },
+  chapterNavigation: {
+    position: 'absolute',
+    bottom: 24,
+    left: 16,
+    right: 16,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: 'rgba(0,0,0,0.7)',
+    borderRadius: 24,
+    padding: 8,
+  },
+  navButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 8,
+  },
+  navText: {
+    color: '#fff',
+    marginHorizontal: 8,
+    fontSize: 16,
+  },
+  tabContent: {
+    flex: 1,
+    padding: 16,
+  },
+  coverContainer: {
+    alignItems: 'center',
+    marginBottom: 16,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
+    elevation: 5,
+  },
+  cover: {
+    width: 180,
+    height: 270,
+    borderRadius: 12,
+  },
+  placeholderCover: {
+    width: 200,
+    height: 300,
+    borderRadius: 12,
+    backgroundColor: `${colors.primary}10`,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  statsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginVertical: 20,
+  },
+  statItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    paddingHorizontal: 16,
+  },
+  statText: {
+    color: colors.grey,
+    fontSize: 14,
+    fontWeight: '500',
+  },
+  searchBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: colors.lightGrey,
+    borderRadius: 12,
+    padding: 8,
+    marginBottom: 8,
+  },
+  searchInput: {
+    flex: 1,
+    marginLeft: 8,
+    fontSize: 15,
+    color: colors.text,
+    paddingVertical: 4,
+  },
+  clearButton: {
+    padding: 4,
+  },
+  searchLoader: {
+    marginTop: 8,
+  },
+  noResultsContainer: {
+    padding: 16,
+    alignItems: 'center',
+  },
+  noResultsText: {
+    color: colors.grey,
+    fontSize: 14,
+  },
+  chapterContentScroll: {
+    flex: 1,
+  },
+  chapterContentContainer: {
+    paddingHorizontal: 16,
+    paddingBottom: 80,
+  },
+  contentTextContainer: {
+    paddingTop: 16,
+  },
+  contentParagraph: {
+    marginBottom: 16,
+    textAlign: 'justify',
+  },
+  tabBarContainer: {
+    backgroundColor: '#fff',
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+  },
+  tabBar: {
+    backgroundColor: '#fff',
+    elevation: 0,
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
+  },
+  tab: {
+    paddingVertical: 12,
+    minHeight: 48,
+  },
+  tabLabel: {
+    textTransform: 'none',
+    fontWeight: '600',
+  },
+  tabIndicator: {
+    backgroundColor: colors.primary,
+    height: 3,
+    borderRadius: 3,
+  },
+  tabLabelContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  tabLabelText: {
+    fontSize: 15,
+    fontWeight: '600',
+  },
+  tabLabelTextActive: {
+    color: colors.primary,
+  },
+  tabLabelTextInactive: {
+    color: '#666',
+  },
+  infoHeader: {
+    padding: 20,
+    backgroundColor: '#fff',
+    borderRadius: 16,
+    marginBottom: 16,
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+  },
+  mainInfo: {
+    marginTop: 16,
+  },
+  authorRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 8,
+    gap: 8,
+  },
+  authorText: {
+    color: colors.grey,
+    fontSize: 15,
+    fontWeight: '500',
+  },
+  statsRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 16,
+    paddingTop: 16,
+    borderTopWidth: 1,
+    borderTopColor: '#f0f0f0',
+  },
+  statDivider: {
+    width: 1,
+    height: 20,
+    backgroundColor: '#f0f0f0',
+  },
+  infoSection: {
+    backgroundColor: '#fff',
+    borderRadius: 16,
+    padding: 20,
+    marginBottom: 16,
+    elevation: 1,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: colors.text,
+    marginBottom: 12,
+    paddingBottom: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
+  },
+  detailsGrid: {
+    gap: 16,
+  },
+  detailItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 4,
+  },
+  detailLabel: {
+    color: colors.grey,
+    fontSize: 15,
+    fontWeight: '500',
+  },
+  detailValue: {
+    color: colors.text,
+    fontSize: 15,
+    fontWeight: '500',
+  },
+  searchWrapper: {
+    padding: 16,
+    backgroundColor: '#fff',
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
+  },
+  searchInput: {
+    flex: 1,
+    marginLeft: 8,
+    fontSize: 15,
+    color: colors.text,
+  },
+  chapterItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 16,
+    backgroundColor: '#fff',
+  },
+  chapterInfo: {
+    flex: 1,
+  },
+  selectedChapter: {
+    backgroundColor: `${colors.primary}10`,
+  },
+  evenChapter: {
+    backgroundColor: '#fafafa',
+  },
+  chapterMeta: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  readingBadge: {
+    backgroundColor: colors.primary,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
+  readingBadgeText: {
+    color: '#fff',
+    fontSize: 12,
+    fontWeight: '500',
+  },
+  separator: {
+    height: 1,
+    backgroundColor: '#f0f0f0',
+  },
+  contentTab: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  contentHeader: {
+    padding: 20,
+    backgroundColor: '#fff',
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
+  },
+  readingInfo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 8,
+    gap: 16,
+  },
+  readingInfoItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  readingInfoText: {
+    color: colors.grey,
+    fontSize: 14,
+  },
+  contentBody: {
+    padding: 20,
+  },
+  tagContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    marginTop: 16,
+  },
+  tag: {
+    backgroundColor: `${colors.primary}15`,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 20,
+  },
+  tagText: {
+    color: colors.primary,
+    fontSize: 13,
+    fontWeight: '500',
+  },
+  heroSection: {
+    position: 'relative',
+    height: 400,
+    width: '100%',
+  },
+  heroCover: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 400,
+    width: '100%',
+  },
+  heroGradient: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: 200,
+    zIndex: 1,
+  },
+  heroContent: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    zIndex: 2,
+    padding: 20,
+  },
+  thumbnailContainer: {
+    position: 'absolute',
+    bottom: 20,
+    left: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 8,
+  },
+  thumbnail: {
+    width: 120,
+    height: 180,
+    borderRadius: 8,
+  },
+  storyInfo: {
+    marginLeft: 140,
+    marginBottom: 20,
+  },
+  storyTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#fff',
+    marginBottom: 8,
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: { width: -1, height: 1 },
+    textShadowRadius: 10,
+  },
+  authorWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  authorInfo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 20,
+  },
+  authorText: {
+    color: '#fff',
+    marginLeft: 6,
+    fontSize: 14,
+    fontWeight: '500',
+  },
+  statsContainer: {
+    flexDirection: 'row',
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 16,
+    marginHorizontal: 16,
+    marginTop: -30,
+    elevation: 4,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    zIndex: 3,
+  },
+  statBox: {
+    flex: 1,
+    alignItems: 'center',
+    borderRightWidth: 1,
+    borderRightColor: '#eee',
+  },
+  statBoxLast: {
+    borderRightWidth: 0,
+  },
+  statValue: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: colors.text,
+    marginBottom: 4,
+  },
+  statLabel: {
+    fontSize: 12,
+    color: colors.grey,
+    textTransform: 'uppercase',
+  },
+  contentSection: {
+    backgroundColor: '#fff',
+    borderRadius: 16,
+    margin: 16,
+    padding: 20,
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: colors.text,
+    marginBottom: 16,
+  },
+  description: {
+    fontSize: 15,
+    lineHeight: 24,
+    color: colors.text,
+    textAlign: 'justify',
+  },
+  tagsRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginTop: 16,
+    gap: 8,
+  },
+  tag: {
+    backgroundColor: `${colors.primary}10`,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 16,
+  },
+  tagText: {
+    color: colors.primary,
+    fontSize: 13,
+    fontWeight: '500',
+  },
+  detailRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
+  },
+  detailRowLast: {
+    borderBottomWidth: 0,
+    paddingBottom: 0,
+  },
+  detailLabel: {
+    fontSize: 14,
+    color: colors.grey,
+  },
+  detailValue: {
+    fontSize: 14,
+    color: colors.text,
+    fontWeight: '500',
+  },
+  statusBadge: {
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
+  detailsContainer: {
+    marginTop: -20,
+    paddingHorizontal: 16,
+    paddingBottom: 24,
+  },
+  descriptionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 16,
+    gap: 8,
+  },
+  detailsWrapper: {
+    gap: 16,
+  },
+  detailItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingBottom: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
+  },
+  detailItemLast: {
+    paddingBottom: 0,
+    borderBottomWidth: 0,
+  },
+  detailIconLabel: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  detailIcon: {
+    width: 24,
+  },
+  statusText: {
+    fontSize: 13,
+    fontWeight: '500',
+  },
+};
+
+export default styles;

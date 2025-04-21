@@ -1,0 +1,72 @@
+{
+  "expo": {
+    "name": "viegrand",
+    "slug": "viegrand",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "scheme": "myapp",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
+    },
+    "android": {
+      "package": "com.viegrand.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "versionCode": 1,
+      "runtimeVersion": "1.0.0",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.INTERNET",
+        "android.permission.SCHEDULE_EXACT_ALARM",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.POST_NOTIFICATIONS"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [ 
+        "@react-native-voice/voice", 
+        { 
+          "microphonePermission": "Allow viegrand to access your microphone", 
+          "speechRecogntionPermission": "Allow viegrand to securely recognize user speech" 
+        } 
+      ],
+      [ 
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Cho phép ứng dụng sử dụng microphone để nhận dạng giọng nói.",
+          "speechRecognitionPermission": "Cho phép ứng dụng sử dụng nhận dạng giọng nói.",
+          "androidSpeechServicePackages": ["com.google.android.googlequicksearchbox"]
+        }
+      ],
+      [
+        "expo-device"
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "6d6392e3-bcb6-42a1-9b05-2f438ee5a89a"
+      }
+    },
+    "owner": "donicaesar",
+    "updates": {
+      "url": "https://u.expo.dev/6d6392e3-bcb6-42a1-9b05-2f438ee5a89a"
+    }
+  }
+}

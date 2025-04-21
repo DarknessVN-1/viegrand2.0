@@ -58,7 +58,8 @@
     "@types/react": "~18.3.12",
     "cross-env": "^7.0.3",
     "expo-module-scripts": "^4.0.5",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "@react-native-community/cli": "latest"
   },
   "private": true,
   "overrides": {

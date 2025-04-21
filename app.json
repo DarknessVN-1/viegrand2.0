@@ -48,7 +48,7 @@
         } 
       ],
       [ 
-        "expo-speech-recognition",
+        "@jamsch/expo-speech-recognition",
         {
           "microphonePermission": "Cho phép ứng dụng sử dụng microphone để nhận dạng giọng nói.",
           "speechRecognitionPermission": "Cho phép ứng dụng sử dụng nhận dạng giọng nói.",
